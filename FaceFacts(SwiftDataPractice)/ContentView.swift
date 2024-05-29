@@ -9,53 +9,43 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+    //1. find where data is stored -> environment
+    @Environment(\.modelContext) var modelContext
+    @State private var path = [Person]()
+    @Query var people: [Person]
     var body: some View {
-        NavigationSplitView {
+        NavigationStack(path: $path) {
             List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+                ForEach(people) { person in NavigationLink(value: person) {
+                    Text(person.name)
                     }
                 }
-                .onDelete(perform: deleteItems)
+                .onDelete(perform: deletePerson)
+            }
+            .navigationTitle("FaceFacts")
+            .navigationDestination(for: Person.self) { person in EditPersonView(person: person)
             }
             .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+                Button("Add Person", systemImage: "plus", action: addPerson)
             }
-        } detail: {
-            Text("Select an item")
         }
     }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
+    func addPerson() {
+        //2. make data to store
+        let person = Person(name: "", emailAddress: "", details: "")
+        //3. actually store the data
+        modelContext.insert(person)
+        //For navigating to person:
+        path.append(person)
     }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
+    
+    func deletePerson(at offsets: IndexSet) {
+        for offset in offsets {
+            let person = people[offset]
+            modelContext.delete(person)
         }
     }
 }
-
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

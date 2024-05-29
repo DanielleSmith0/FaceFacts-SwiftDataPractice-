@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD882B1C2BFD6B7A00C0CB36 /* EditPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD882B1B2BFD6B7A00C0CB36 /* EditPersonView.swift */; };
 		CDFD27F12BCA43F8005298EE /* FaceFacts_SwiftDataPractice_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD27F02BCA43F8005298EE /* FaceFacts_SwiftDataPractice_App.swift */; };
 		CDFD27F32BCA43F8005298EE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD27F22BCA43F8005298EE /* ContentView.swift */; };
-		CDFD27F52BCA43F8005298EE /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD27F42BCA43F8005298EE /* Item.swift */; };
 		CDFD27F72BCA43FA005298EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFD27F62BCA43FA005298EE /* Assets.xcassets */; };
 		CDFD27FA2BCA43FA005298EE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDFD27F92BCA43FA005298EE /* Preview Assets.xcassets */; };
 		CDFD28012BCA48FB005298EE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFD28002BCA48FB005298EE /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD882B1B2BFD6B7A00C0CB36 /* EditPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPersonView.swift; sourceTree = "<group>"; };
 		CDFD27ED2BCA43F8005298EE /* FaceFacts(SwiftDataPractice).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FaceFacts(SwiftDataPractice).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFD27F02BCA43F8005298EE /* FaceFacts_SwiftDataPractice_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceFacts_SwiftDataPractice_App.swift; sourceTree = "<group>"; };
 		CDFD27F22BCA43F8005298EE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		CDFD27F42BCA43F8005298EE /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		CDFD27F62BCA43FA005298EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDFD27F92BCA43FA005298EE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDFD28002BCA48FB005298EE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -57,8 +57,8 @@
 			children = (
 				CDFD27F02BCA43F8005298EE /* FaceFacts_SwiftDataPractice_App.swift */,
 				CDFD27F22BCA43F8005298EE /* ContentView.swift */,
+				CD882B1B2BFD6B7A00C0CB36 /* EditPersonView.swift */,
 				CDFD28002BCA48FB005298EE /* Person.swift */,
-				CDFD27F42BCA43F8005298EE /* Item.swift */,
 				CDFD27F62BCA43FA005298EE /* Assets.xcassets */,
 				CDFD27F82BCA43FA005298EE /* Preview Content */,
 			);
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDFD27F32BCA43F8005298EE /* ContentView.swift in Sources */,
-				CDFD27F52BCA43F8005298EE /* Item.swift in Sources */,
+				CD882B1C2BFD6B7A00C0CB36 /* EditPersonView.swift in Sources */,
 				CDFD28012BCA48FB005298EE /* Person.swift in Sources */,
 				CDFD27F12BCA43F8005298EE /* FaceFacts_SwiftDataPractice_App.swift in Sources */,
 			);
